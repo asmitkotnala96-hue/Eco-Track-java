@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 import model.Complaint;
 
-class FileManager {
+public class FileManager {
 
     private static final String FILE = "data/complaints.txt";
 
