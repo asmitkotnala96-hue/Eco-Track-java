@@ -1,6 +1,6 @@
 package service;
 import java.util.*;
-
+import model.User;
 class AuthService {
 
     public static User login(List<User> users, String u, String p) {
