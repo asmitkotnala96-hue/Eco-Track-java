@@ -1,3 +1,4 @@
+package model;
 class Complaint {
     private int id;
     private String description;
