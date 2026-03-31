@@ -1,4 +1,8 @@
 package ui;
+
+import model.*;
+import service.*;
+import filehandler.*;
 import java.util.*;
 
 public class MainUI {
