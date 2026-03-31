@@ -1,7 +1,7 @@
 package service;
 import java.util.*;
 import model.User;
-class AuthService {
+public class AuthService {
 
     public static User login(List<User> users, String u, String p) {
         for (User user : users) {
