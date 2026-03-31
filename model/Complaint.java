@@ -1,5 +1,5 @@
 package model;
-class Complaint {
+public class Complaint {
     private int id;
     private String description;
     private String location;
