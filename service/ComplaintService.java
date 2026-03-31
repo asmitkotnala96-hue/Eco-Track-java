@@ -4,7 +4,7 @@ import java.util.*;
 import model.Complaint;
 import model.Status;
 
-class ComplaintService {
+public class ComplaintService {
 
     public static int generateId(List<Complaint> list) {
         return list.size() + 1;
