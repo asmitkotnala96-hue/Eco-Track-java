@@ -1,5 +1,8 @@
+package filehandler;
+
 import java.io.*;
 import java.util.*;
+import model.User;
 
 class UserFileManager {
 
