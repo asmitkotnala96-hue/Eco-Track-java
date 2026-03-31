@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 import model.User;
 
-class UserFileManager {
+public class UserFileManager {
 
     private static final String FILE = "data/users.txt";
 
