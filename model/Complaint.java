@@ -26,12 +26,22 @@ public class Complaint {
     }
 
     public static Complaint fromFileString(String line) {
-        String[] p = line.split("\\|");
-        return new Complaint(
-            Integer.parseInt(p[0]),
-            p[1],
-            p[2],
-            Status.valueOf(p[3])
-        );
+
+        if (line == null || line.trim().isEmpty()) {
+            return null;
+        }
+    
+        String[] parts = line.split("\\|");
+    
+        if (parts.length < 4) {
+            return null;
+        }
+    
+        int id = Integer.parseInt(parts[0].trim());
+        String desc = parts[1].trim();
+        String loc = parts[2].trim();
+        Status status = Status.valueOf(parts[3].trim());
+    
+        return new Complaint(id, desc, loc, status);
     }
 }
