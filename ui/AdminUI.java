@@ -33,6 +33,13 @@ public class AdminUI {
 
                     ComplaintService.updateStatus(list, id, Status.valueOf(s.toUpperCase()));
                     FileManager.overwrite(list);
+                    
+                    for (Complaint c : list) {
+                        if (c.getId() == id) {
+                            FileManager.updateSeparateFile(c);
+                            break;
+                        }
+                    }
 
                 } else break;
 
