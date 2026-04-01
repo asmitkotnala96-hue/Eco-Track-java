@@ -12,8 +12,7 @@ public class AdminUI {
 
         while (true) {
             System.out.println("\n1.View 2.Update 3.Exit");
-            int ch = sc.nextInt(); sc.nextLine();
-
+            int ch = Integer.parseInt(sc.nextLine());
             try {
                 List<Complaint> list = FileManager.load();
 
@@ -26,7 +25,7 @@ public class AdminUI {
 
                 } else if (ch == 2) {
                     System.out.print("ID: ");
-                    int id = sc.nextInt(); sc.nextLine();
+                    int id = Integer.parseInt(sc.nextLine());
 
                     System.out.print("Status: ");
                     String s = sc.nextLine();
@@ -43,8 +42,8 @@ public class AdminUI {
 
                 } else break;
 
-            } catch (Exception e) {
-                System.out.println("Error");
+            }catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }
