@@ -17,7 +17,12 @@ public class FileManager {
         String line;
 
         while ((line = br.readLine()) != null) {
-            list.add(Complaint.fromFileString(line));
+            if (line.trim().isEmpty()) continue;  // skip blank lines
+    
+            Complaint c = Complaint.fromFileString(line);
+            if (c != null) {
+            list.add(c);
+            }
         }
         br.close();
         return list;
