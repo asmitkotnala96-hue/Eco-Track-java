@@ -38,4 +38,23 @@ public class FileManager {
         }
         bw.close();
     }
+    public static void saveAsSeparateFile(Complaint c) throws IOException {
+
+    String fileName = "data/complaint_" + c.getId() + ".txt";
+
+    BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
+
+    bw.write("===== Complaint Details =====");
+    bw.newLine();
+    bw.write("ID: " + c.getId());
+    bw.newLine();
+    bw.write("Description: " + c.getDescription());
+    bw.newLine();
+    bw.write("Location: " + c.getLocation());
+    bw.newLine();
+    bw.write("Status: " + c.getStatus());
+    bw.newLine();
+
+    bw.close();
+}
 }
