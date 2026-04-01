@@ -12,7 +12,7 @@ public class UserUI {
 
         while (true) {
             System.out.println("\n1.File 2.Check 3.Exit");
-            int ch = sc.nextInt(); sc.nextLine();
+            int ch = Integer.parseInt(sc.nextLine());
 
             try {
                 List<Complaint> list = FileManager.load();
@@ -44,9 +44,9 @@ public class UserUI {
 
                 } else break;
 
-            } catch (Exception e) {
-                System.out.println("Error");
-            }
+            } catch (Exception e){
+                e.printStackTrace();
+                }
         }
     }
 }
