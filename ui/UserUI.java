@@ -26,8 +26,15 @@ public class UserUI {
                     System.out.print("Loc: ");
                     String l = sc.nextLine();
 
-                    Complaint c = new Complaint(id, d, l, Status.PENDING);
+                   Complaint c = new Complaint(id, d, l, Status.PENDING);
+
+                    // Save in main tracking file
                     FileManager.save(c);
+
+                    // ALSO create separate file
+                    FileManager.saveAsSeparateFile(c);
+
+                    System.out.println("Complaint saved and file created!");
 
                 } else if (ch == 2) {
                     System.out.print("ID: ");
