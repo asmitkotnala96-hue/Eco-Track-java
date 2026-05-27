@@ -34,7 +34,11 @@ public class UserUI {
                     // ALSO create separate file
                     FileManager.saveAsSeparateFile(c);
 
+                    ComplaintService.saveComplaintToDB(c);
+
                     System.out.println("Complaint saved and file created!");
+                    
+                    System.out.println("Your Complaint ID is: " + id);
 
                 } else if (ch == 2) {
                     System.out.print("ID: ");

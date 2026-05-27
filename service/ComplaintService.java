@@ -1,6 +1,9 @@
 package service;
 
 import java.util.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
 import model.Complaint;
 import model.Status;
 
@@ -30,4 +33,39 @@ public class ComplaintService {
         }
         System.out.println("Not found");
     }
+
+    public static void saveComplaintToDB(Complaint complaint) {
+
+    try {
+
+        Connection conn =
+                DatabaseConnections.getConnection();
+
+        String query =
+                "INSERT INTO complaints(id, description, location, status) VALUES(?,?,?,?)";
+
+        PreparedStatement ps =
+                conn.prepareStatement(query);
+
+        ps.setInt(1, complaint.getId());
+
+        ps.setString(2,
+                complaint.getDescription());
+
+        ps.setString(3,
+                complaint.getLocation());
+
+        ps.setString(4,
+                complaint.getStatus().toString());
+
+        ps.executeUpdate();
+
+        System.out.println(
+                "Complaint Saved To Database");
+
+    } catch (Exception e) {
+
+        e.printStackTrace();
+    }
+}
 }
