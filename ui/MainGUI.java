@@ -11,11 +11,13 @@ public class MainGUI extends JFrame {
 
     JButton exitButton;
 
+    JButton adminButton;
+
     public MainGUI() {
 
         setTitle("Complaint Management System");
 
-        setSize(400, 300);
+        setSize(800, 600);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -40,8 +42,11 @@ public class MainGUI extends JFrame {
         statusButton =
                 new JButton("Check Complaint Status");
 
+         adminButton =new JButton("Admin Pannel");
+
         exitButton =
                 new JButton("Exit");
+
 
         add(titleLabel);
 
@@ -49,12 +54,15 @@ public class MainGUI extends JFrame {
 
         add(statusButton);
 
+        add(adminButton);
+
         add(exitButton);
+
 
         // Open UserGUI
         userButton.addActionListener(e -> {
 
-            new UserGUI();
+            new UserLoginGUI();
         });
 
         // Open StatusGUI
@@ -62,7 +70,10 @@ public class MainGUI extends JFrame {
 
             new StatusGUI();
         });
+        adminButton.addActionListener(e -> {
 
+        new AdminLoginGUI();
+});
         // Exit App
         exitButton.addActionListener(e -> {
 

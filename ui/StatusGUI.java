@@ -20,7 +20,7 @@ public class StatusGUI extends JFrame {
 
         setTitle("Complaint Status Checker");
 
-        setSize(400, 200);
+        setSize(800, 600);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
