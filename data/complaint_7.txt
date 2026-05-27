@@ -1,0 +1,5 @@
+===== Complaint Details =====
+ID: 7
+Description: This is to inform that a huge pile of trash has been dumped haphazardly 
+Location: palm trees
+Status: PENDING
